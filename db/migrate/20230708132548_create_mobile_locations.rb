@@ -16,7 +16,7 @@ class CreateMobileLocations < ActiveRecord::Migration[7.0]
       t.decimal :odometer, precision: 5, scale: 2, default: 0.00
       t.decimal :fuel_percents, precision: 5, scale: 2, default: 0.00
       
-      t.time :time_updated
+      t.datetime :time_updated
 
       t.timestamps
     end
