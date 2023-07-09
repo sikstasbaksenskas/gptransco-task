@@ -19,7 +19,7 @@ module MobileLocations
 
       if last_driving_mobile_location
         first_idle_mobile_location = MobileLocation.where(time_updated: last_driving_mobile_location.time_updated..last_idle_mobile_location.time_updated,
-                                                        speed: IDLE_SPEED).first
+                                                          speed: IDLE_SPEED).first
       else
         first_idle_mobile_location = MobileLocation.where("time_updated <= ?", last_idle_mobile_location.time_updated)
                                                    .where(speed: IDLE_SPEED)
